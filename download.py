@@ -54,7 +54,7 @@ for file_link in tqdm(file_urls, desc="Downloading files"):
     response = requests.get(file_link)
     response.raise_for_status()
 
-    path_to_save = save_dir / f"{filename}.nc"
+    path_to_save = save_dir / f"{filename}"
 
     # Save the file to the current directory
     with open(path_to_save, 'wb') as file:
